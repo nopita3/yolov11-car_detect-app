@@ -23,7 +23,7 @@ if uploaded_image is not None:
   
   # Run YOLO inference
   st.info("Running YOLO object detection...")
-  results = model.predict(image_np , conf=0.-)
+  results = model.predict(image_np , conf=0.3)
   
   # Draw results on image
   result_image = results[0].plot()
